@@ -1,0 +1,30 @@
+<div class="list__page">
+  <div *ngIf="customers.length; else noCustomers"
+    class="list__container"
+  >
+    <ul class="customer__list">
+      <app-customer-item
+          *ngFor="let customer of customers | paginate: {
+            id: 'customers-pagination',
+            itemsPerPage: pageSize,
+            currentPage: page,
+            totalItems: totalCustomers
+          }"
+          [customer]="customer"
+        >
+      </app-customer-item>
+    </ul>
+  </div>
+  <ng-template #noCustomers>
+    <p>Não há clientes para mostrar.</p>
+  </ng-template>
+
+  <pagination-controls class="pagination"
+    id="customers-pagination"
+    [maxSize]="5"
+    previousLabel="Anterior"
+    nextLabel="Próximo"
+    (pageChange)="onPageChange($event)"
+  >
+  </pagination-controls>
+</div>

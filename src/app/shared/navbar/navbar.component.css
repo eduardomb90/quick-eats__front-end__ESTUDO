@@ -1,0 +1,103 @@
+:root {
+  --cor-primaria: #f34079;
+  --cor-secundaria: #fc894d;
+  --cor-logo: #1B2F38;
+  --cor-branca: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.barra-navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(135deg, #6841FA 40%, #8241fa);
+  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  top: 0;
+  margin-bottom: 5px;
+}
+
+.nav-logo img {
+  width: 7rem;
+  height: 6rem;
+}
+
+.menu-nav{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.lista-menu-nav{
+  display: flex;
+  list-style: none;
+}
+
+.menu-nav-item {
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.menu-nav-item:hover {
+  color: #1B2F38;
+}
+
+/*testando como fazer o toggle button*/
+.navbar-toggler {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 20px;
+  margin: 0 5% 0 0;
+}
+
+.navbar-toggler-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  transition: all 0.3s;
+  /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");*/
+}
+
+.navbar-toggler-icon.active {
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+  .lista-menu-nav {
+    display: none;
+  }
+
+  .lista-menu-nav.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0.1rem;
+    background: linear-gradient(5deg, #6841FA 40%, #8241fa 100%);
+  }
+
+  .menu-nav-item{
+    display: block;
+    padding: 0.5em;
+  }
+
+  .navbar-toggler{
+    display: block;
+  }
+}

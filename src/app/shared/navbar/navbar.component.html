@@ -1,0 +1,17 @@
+<header>
+  <nav class="barra-navegacao">
+      <a class="nav-logo" href="#">
+        <img src="/assets/images/logo-nobg.png" alt="Quick Eats">
+      </a>
+
+      <div class="menu-nav">
+        <ul class="lista-menu-nav" [class.active]="isMenuDroped">
+          <li><a class="menu-nav-item" href="#">Home</a></li>
+          <li><a class="menu-nav-item" routerLink="/customers">Customers</a></li>
+        </ul>
+        <button class="navbar-toggler" (click)="toggleMenu()">
+          <span class="navbar-toggler-icon" [class.active]="togglerActive"></span>
+        </button>
+      </div>
+  </nav>
+</header>

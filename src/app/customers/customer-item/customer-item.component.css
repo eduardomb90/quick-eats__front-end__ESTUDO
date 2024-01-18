@@ -1,0 +1,64 @@
+li {
+  display: inline-flex;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+  align-items: center;
+  justify-content: flex-start; /* Para alinhar os itens à esquerda */
+  margin: 1rem 0.5rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 10px; /* Adiciona espaço entre os itens flexíveis */
+}
+
+.customer__name, .customer__email {
+  flex-shrink: 0;
+  flex-basis: auto;
+  max-width: 50%; /* Define um tamanho máximo para nome e email */
+  white-space: normal; /* Permite que o texto quebre linha */
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+.customer__name {
+  font-size: 1.5em;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.customer__email {
+  font-style: italic;
+  padding: 10px;
+  font-weight: 200;
+}
+
+li span {
+  padding: 10px;
+}
+
+.btn {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-edit {
+  background-color: #7c44ff; /* Verde */
+}
+
+.btn-delete {
+  background-color: #a781ff; /* Vermelho */
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .customer__name, .customer__email {
+    max-width: none;
+  }
+}

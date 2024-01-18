@@ -1,0 +1,34 @@
+.list__page {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list__container {
+  padding-top: 1rem;
+  display: flex;          /* Usa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+}
+
+.customer__list {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0;            /* Remove o preenchimento padrão */
+  margin: 0 auto;        /* Remove a margem padrão e adiciona margem automática nas laterais para centralizar horizontalmente */
+}
+
+.pagination {
+  margin-top: 1rem; /* Adicione uma margem superior para espaço */
+  padding: 1rem;
+  align-self: center;
+}
+
+.pagination ::ng-deep .ngx-pagination .current {
+  background: rgb(152, 89, 255);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+}

@@ -1,0 +1,11 @@
+<div class="customer__item">
+  <li class="list__item">
+
+      <div class="customer__name">{{ customer.name }}</div>
+      <div class="customer__email">email: {{ customer.email }}</div>
+
+    <a routerLink="/customers/edit/{{ customer.id }}" class="btn btn-edit">Editar</a>
+    <a routerLink="/delete/{{ customer.id }}" class="btn btn-delete">Excluir</a>
+  </li>
+  <!-- Você pode adicionar mais detalhes conforme necessário -->
+</div>
