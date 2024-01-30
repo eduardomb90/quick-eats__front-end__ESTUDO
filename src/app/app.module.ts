@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,6 +13,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CustomerEditComponent } from './customers/customer-edit/customer-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { CustomerAddComponent } from './customers/customer-add/customer-add.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     CustomerListComponent,
     NavbarComponent,
     FooterComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    CustomerAddComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

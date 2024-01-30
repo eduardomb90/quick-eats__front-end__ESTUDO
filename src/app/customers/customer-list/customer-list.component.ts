@@ -36,4 +36,8 @@ export class CustomerListComponent implements OnInit {
     this.page = newPage;
     this.loadCustomers();
   }
+
+  handleCustomerDeleted() {
+    this.loadCustomers();
+  }
 }

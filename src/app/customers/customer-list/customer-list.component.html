@@ -1,4 +1,5 @@
 <div class="list__page">
+  <a routerLink="/customers/add" class="btn btn-primary">Adicionar Cliente</a>
   <div *ngIf="customers.length; else noCustomers"
     class="list__container"
   >
@@ -11,6 +12,7 @@
             totalItems: totalCustomers
           }"
           [customer]="customer"
+          (customerDeleted)="handleCustomerDeleted()"
         >
       </app-customer-item>
     </ul>
