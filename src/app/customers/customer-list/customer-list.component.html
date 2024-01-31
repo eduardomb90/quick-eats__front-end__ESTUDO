@@ -1,5 +1,7 @@
 <div class="list__page">
-  <a routerLink="/customers/add" class="btn btn-primary">Adicionar Cliente</a>
+  <div class="btn-container">
+    <a routerLink="/customers/add" class="btn btn-primary btn__add-cliente">Adicionar Cliente</a>
+  </div>
   <div *ngIf="customers.length; else noCustomers"
     class="list__container"
   >
@@ -18,7 +20,7 @@
     </ul>
   </div>
   <ng-template #noCustomers>
-    <p>Não há clientes para mostrar.</p>
+    <span>Não há clientes para mostrar.</span>
   </ng-template>
 
   <pagination-controls class="pagination"
@@ -27,6 +29,7 @@
     previousLabel="Anterior"
     nextLabel="Próximo"
     (pageChange)="onPageChange($event)"
+    [autoHide]="true"
   >
   </pagination-controls>
 </div>

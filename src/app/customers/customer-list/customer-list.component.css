@@ -1,8 +1,27 @@
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__add-cliente {
+  background: rgb(152, 89, 255);
+  border: none;
+}
+
 .list__page {
   padding-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.list__page span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .list__container {
